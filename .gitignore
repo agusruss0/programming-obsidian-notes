@@ -1,0 +1,13 @@
+.obsidian/*
+.obsidian/themes
+.obsidian/appearance.json
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+#Allow this
+!obsidian/graph.json
+!obsidian/plugins/
+
+# Add below lines to exclude OS settings and caches
+.trash/
+.DS_Store

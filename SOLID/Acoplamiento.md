@@ -1,3 +1,9 @@
+---
+tags:
+  - OOP
+  - Programacion
+  - Teoria
+---
 
 ---
 ## ¿Que es el acoplamiento?
@@ -15,7 +21,7 @@ Acá el parámetro que se manda no es un escalar sino un objeto. Por ende necesi
 #### Acoplamiento por Control
 En este caso lo que se manda por parámetro (un ```bool```, un ```int```, etc) definirá que parte del código se ejecuta. Si tengo un método $A$ que utiliza al método $B$. $A$ debe conocer como funciona $B$ para saber que mandar para que se realize lo deseado. La solución a este problema es dividir a $B$ en dos metodos distintos $B_{1}, B_{2}$ y que $A$ llame al que cumple con su requisito.
 #### Acoplamiento Común
-Utilizacion de variables globales. Al ser accesible desde cualquier lugar, se corre el riesgo de perder el valor que se había guardado. Mejor crear una clase y guardar ahí ese valor.
+Utilización de variables globales. Al ser accesible desde cualquier lugar, se corre el riesgo de perder el valor que se había guardado. Mejor crear una clase y guardar ahí ese valor.
 #### Acoplamiento Patológico
 Un método usa parte del código de otro. En [[OOP]] no se ve mucho pero en lenguajes estructurados se podía dependiendo del input ir a un línea de código especifica.
 

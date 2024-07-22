@@ -69,5 +69,23 @@ Los métodos no paramétricos no asumen explícitamente la forma funcional de $f
 
 ---
 ## Precisión de la predicción vs. Interpretabilidad del modelo
-Entre los métodos que podemos encontrar, existen algunos mas restrictivos y otros mas flexibles. Por ejemplo,  la [[regresion lineal]] es mucho mas restrictiva que el método de thin-plate spline, ya que uno genera funciones lineales ya sean lineas o planos, y la otra puede ajustar de manera mas suave como una manta.
+Entre los métodos que podemos encontrar, existen algunos mas restrictivos y otros mas flexibles. Por ejemplo,  la [[regresion lineal]] es mucho mas restrictiva que el método de thin-plate spline, ya que uno genera funciones lineales ya sean líneas o planos, y la otra puede ajustar de manera mas suave como una manta.
 ![[Pasted image 20240721220554.png|600]]
+
+Para decidir si necesitamos un método mas restrictivo o uno mas flexible, tenemos que tener en cuenta que queremos obtener del modelo. Por ejemplo, si lo que buscamos es inferencia, un modelo restrictivo es mucho mas interpretable. Así podremos entender mejor la relación que hay entre $Y$ y $X_{1},X_{1},\dots,X_{p}$ . Si el objetico es la predicción, la interpretabilidad no nos interesa por lo que podemos optar por un modelo mas flexible que cumpla únicamente en generar predicciones precisas.
+
+---
+## Supervisado vs No Supervisado
+La mayoría de los problemas de aprendizaje estadístico entran en dos categorías: *supervisado* y *no supervisado*.
+### Aprendizaje Supervisado
+En el aprendizaje supervisado tenemos que para cada observación de las medidas del predictor $x_{i}, i=1,\dots,n$ hay una medida de respuesta asociada $y_{i}$. Queremos ajustar un modelo  que relacione la respuesta con los predictores, con la esperanza de predecir con precisión la respuesta para futuras observaciones (predicción) o entender mejor la relación entre la respuesta y los predictores (inferencia).
+### Aprendizaje No Supervisado
+El aprendizaje no supervisado describe la situación algo mas compleja en la que para cada observación $i=1,\dots,n$, vemos un vector de medidas $x_{i}$ pero ninguna respuesta asociada $y_{i}$. Es decir no existe variable de respuesta a predecir, estamos trabajando a ciegas, ya que al no tener esta variable no podemos supervisar nuestro análisis.
+Podemos intentar entender las relaciones entre las variables o entre las observaciones. Una de las herramientas mas comunes para estos casos es el _análisis de cluster_ o *clustering*. El objetivo de esta herramienta es la de comprobar, en función de $x_{1},\dots,x_{n}$, si alguna de las observaciones se dividen en grupos relativamente distintos.
+
+![[Pasted image 20240721234529.png|600]]
+
+Muchas veces no es claro si un análisis deberia ser considerado supervisado o no supervisado. Por ejemplo, si tenemos un dataset de $n$ observaciones. Por $m$ de las observaciones, con $m<n$, tenemos medidas del predictor y medidas de la respuesta. Para las restantes $n-m$ observaciones, tenemos las medidas de predicción pero nos las de respuesta. Este escenario puede darse cuando los costos de medición de los predictores son relativamente bajos, pero las correspondientes a la repuesta con mucho mas costosas de recopilar. Nos referimos a esta configuración como un problema de _aprendizaje semi-supervisado_. Queremos un método de aprendizaje estadístico que nos permita utilizar las $m$ observaciones para las cuales las medidas de repuesta están disponibles como también las $n-m$ para las cuales no.
+
+---
+## Regresión vs Clasificación

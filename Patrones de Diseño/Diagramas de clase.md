@@ -16,10 +16,11 @@ Una clase esta compuesta por 3 elementos: __nombre de la clase, atributos, funci
 - Nombre de clase: identifica la clase. Si fuera un clase abstracta el nombre se escribe en _cursiva_
 - Atributos: Atributos públicos, privados o protegidos.
 - Funciones: funciones que ofrece la clase con sus respectivas visibilidades: públicos, privados o protegidos.
+<div style="text-align: center;">
 ```mermaid
 classDiagram
 	class NombreDeClase{
 	+Atributos
 	+Funciones()
 	}
-```
+</div>	

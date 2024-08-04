@@ -16,11 +16,16 @@ Una clase esta compuesta por 3 elementos: __nombre de la clase, atributos, funci
 - Nombre de clase: identifica la clase. Si fuera un clase abstracta el nombre se escribe en _cursiva_
 - Atributos: Atributos públicos, privados o protegidos.
 - Funciones: funciones que ofrece la clase con sus respectivas visibilidades: públicos, privados o protegidos.
-<div style="text-align: center;">
 ```mermaid
 classDiagram
 	class NombreDeClase{
 	+Atributos
 	+Funciones()
 	}
-</div>	
+```
+Tanto los atributos como las funciones incluyen al principio de su descripción la visibilidad que tendrá. Esta visibilidad se identifica con un símbolo:
+- **(+) Pública.** Representa que se puede acceder al atributo o función desde cualquier lugar de la aplicación.
+- **(-) Privada.** Representa que se puede acceder al atributo o función únicamente desde la misma clase.
+- **(#) Protegida.** Representa que el atributo o función puede ser accedida únicamente desde la misma clase o desde las clases que hereden de ella (clases derivadas).
+### Relaciones
+Una relación i**dentifica una dependencia**. Esta dependencia puede ser entre dos o más clases (más común) o una clase hacía sí misma (menos común, pero existen), este último tipo de dependencia se denomina _dependencia reflexiva_.

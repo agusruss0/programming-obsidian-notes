@@ -1,0 +1,11 @@
+{
+  "accentColor": "",
+  "theme": "obsidian",
+  "baseFontSize": 18,
+  "cssTheme": "Minimal",
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "center_align",
+    "mermaid_center"
+  ]
+}

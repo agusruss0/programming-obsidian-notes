@@ -1,0 +1,16 @@
+.obsidian/*
+
+#Allow this
+!.obsidian/app.json
+!.obsidian/graph.json
+!.obsidian/plugins/
+!.obsidian/config
+!.obsidian/themes
+!.obsidian/appearance.json
+!.obsidian/hotkeys.json
+!.obsidian/core-plugins.json
+!.obsidian/community-plugins.json
+
+# Add below lines to exclude OS settings and caches
+.trash/
+.DS_Store

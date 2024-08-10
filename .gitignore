@@ -10,6 +10,7 @@
 !.obsidian/hotkeys.json
 !.obsidian/core-plugins.json
 !.obsidian/community-plugins.json
+!.obsidian/snippets
 
 # Add below lines to exclude OS settings and caches
 .trash/

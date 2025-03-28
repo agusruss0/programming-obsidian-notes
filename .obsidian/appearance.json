@@ -2,7 +2,7 @@
   "accentColor": "",
   "theme": "obsidian",
   "baseFontSize": 18,
-  "cssTheme": "Minimal",
+  "cssTheme": "Obsidian gruvbox",
   "nativeMenus": false,
   "enabledCssSnippets": [
     "center_align",
